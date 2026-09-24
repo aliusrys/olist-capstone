@@ -86,6 +86,17 @@ jupyter notebook notebooks/
 Полный прогон занимает ~15 минут, большая часть уходит на кросс-валидацию Random Forest в ноутбуке 03.
 Базу можно собрать и без Jupyter: `python src/build_database.py`.
 
+### Запуск в Google Colab
+
+1. Загрузите папку проекта на Google Drive так, чтобы получилось `MyDrive/olist-capstone/`, а 9 CSV лежали в `MyDrive/olist-capstone/data/raw/`.
+2. Откройте ноутбук из Drive: правый клик → «Открыть с помощью» → Google Colaboratory.
+3. Запустите все ячейки (Runtime → Run all). Первая ячейка подключит Google Drive (Colab попросит разрешение) и перейдёт в папку проекта.
+   Если папка лежит по другому пути, исправьте `PROJECT_DIR` в первой ячейке.
+4. База SQLite создаётся на диске сессии Colab (`/content/olist.db`); ноутбуки 02 и 03 сами пересобирают её, если сессия новая (~1 мин).
+   Графики сохраняются в `reports/figures/` на Drive.
+
+Все библиотеки (pandas, scikit-learn, matplotlib) в Colab уже установлены.
+
 ## Методология
 
 ### 1. База данных и SQL
