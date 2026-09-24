@@ -1,0 +1,33 @@
+# --- Данные: тяжёлые файлы не храним в репозитории (скачиваются с Kaggle, см. README) ---
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+*.csv
+*.parquet
+*.zip
+
+# --- Модели ---
+models/
+*.pkl
+*.joblib
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
